@@ -19,15 +19,18 @@ public class Flat {
     @JoinColumn(name = "account_id")
     private Account account;
 
-    @Column(name = "address")
+    @Column
     private String address;
 
-    @Column(name = "size")
+    @Column
     private Double size;
 
-    @Column(name = "rental_price")
+    @Column
     private Integer rentalPrice;
 
-    @Column(name = "deleted")
+    @Column
     private boolean deleted = false;
+
+    @Column(columnDefinition = "TEXT")
+    private String pictureUrl;
 }

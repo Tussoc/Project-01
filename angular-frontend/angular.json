@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
+              "angular-frontend/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "angular-frontend/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -16,26 +16,29 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column
     private Long id;
 
-    @Column(name = "email", unique = true)
+    @Column(unique = true)
     @Email
     private String email;
 
-    @Column(name = "display_name")
+    @Column
     private String displayName;
 
-    @Column(name = "phone_number")
+    @Column
+    private String password;
+
+    @Column
     private String phoneNumber;
 
-    @Column(name = "profile-picture-url")
+    @Column
     private String profilePictureUrl;
 
     @Enumerated(EnumType.STRING)
     @ElementCollection(targetClass = AccountType.class)
     @CollectionTable(name = "account_type")
-    @Column(name = "account_type")
+    @Column
     private List<AccountType> accountType;
 
     @OneToMany(mappedBy = "account", orphanRemoval = true)

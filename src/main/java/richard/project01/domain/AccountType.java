@@ -12,5 +12,5 @@ public enum AccountType {
     LANDLORD("Landlord"),
     ADMIN("Admin");
 
-    private String displayName;
+    private final String displayName;
 }
